@@ -217,7 +217,7 @@ async function ensureBootstrapAdmin() {
 }
 
 async function isAdmin(telegramId) {
-  if (IS_MOCK) return [BOT_ADMIN_ID, 7698721215].includes(telegramId) 
+  if (IS_MOCK) return true
   return !!(await Admin.findOne({ telegramId: Number(telegramId) }));
 }
 
